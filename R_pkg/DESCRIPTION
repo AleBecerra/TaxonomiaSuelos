@@ -1,6 +1,6 @@
-Package: SoilTaxonomy
-Title: US Soil Taxonomy
-Description: What the package does (one paragraph).
+Package: TaxonomiaSuelos
+Title: US Soil Taxonomy en español
+Description: Traducción al español del paquete SoilTaxonomy de Dylan Beaudette, por Alejandro Becerra
 Version: 0.0.0.9000
 Authors@R: c(person(given="Dylan", family="Beaudette", role = c("aut", "cre"), email = "dylan.beaudette@ca.usda.gov"))
 Author: Dylan Beaudette [aut, cre]
@@ -10,8 +10,8 @@ License: GPL (>= 3)
 Encoding: UTF-8
 LazyLoad: yes
 Repository: CRAN
-URL: https://github.com/ncss-tech/SoilTaxonomy
-BugReports: https://github.com/ncss-tech/SoilTaxonomyissues
+URL: https://github.com/AleBecerra/TaxonomiaSuelos
+BugReports: https://github.com/AleBecerra/TaxonomiaSuelosissues
 Imports: 
     stringdist,
     purrr,
