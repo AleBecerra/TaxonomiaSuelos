@@ -35,7 +35,7 @@ isValidST <- function(needle, level) {
     stop('level must be in `tax_order`, `tax_suborder`, `tax_greatgroup`, `tax_subgroup`', call. = FALSE)
   
   # load local copy of unique taxa
-  load(system.file("data/ST_unique_list.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_unique_list.rda", package="TaxonomiaSuelos")[1])
   
   # load required elements
   haystack <- ST_unique_list[[level]]
@@ -56,7 +56,7 @@ isValidST <- function(needle, level) {
 OrderFormativeElements <- function(x) {
   
   # load local copy of formative elements
-  load(system.file("data/ST_formative_elements.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_formative_elements.rda", package="TaxonomiaSuelos")[1])
   
   # load dictionary
   lut <- ST_formative_elements$soilorder
@@ -110,10 +110,10 @@ OrderFormativeElements <- function(x) {
 SubOrderFormativeElements <- function(x) {
   
   # load local copy of formative elements
-  load(system.file("data/ST_formative_elements.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_formative_elements.rda", package="TaxonomiaSuelos")[1])
   
   # load unique taxa
-  load(system.file("data/ST_unique_list.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_unique_list.rda", package="TaxonomiaSuelos")[1])
   
   # load dictionary
   lut <- ST_formative_elements$suborder
@@ -252,10 +252,10 @@ SubOrderFormativeElements <- function(x) {
 GreatGroupFormativeElements <- function(x) {
   
   # load local copy of formative elements
-  load(system.file("data/ST_formative_elements.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_formative_elements.rda", package="TaxonomiaSuelos")[1])
   
   # load unique taxa
-  load(system.file("data/ST_unique_list.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_unique_list.rda", package="TaxonomiaSuelos")[1])
   
   # load dictionary
   lut <- ST_formative_elements$greatgroup
@@ -318,10 +318,10 @@ GreatGroupFormativeElements <- function(x) {
 SubGroupFormativeElements <- function(x) {
   
   # load local copy of formative elements
-  load(system.file("data/ST_formative_elements.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_formative_elements.rda", package="TaxonomiaSuelos")[1])
   
   # load unique taxa
-  load(system.file("data/ST_unique_list.rda", package="SoilTaxonomy")[1])
+  load(system.file("data/ST_unique_list.rda", package="TaxonomiaSuelos")[1])
   
   # load dictionary
   lut <- ST_formative_elements$subgroup
