@@ -1,0 +1,22 @@
+Package: SoilTaxonomy
+Title: US Soil Taxonomy
+Description: What the package does (one paragraph).
+Version: 0.0.0.9000
+Authors@R: c(person(given="Dylan", family="Beaudette", role = c("aut", "cre"), email = "dylan.beaudette@ca.usda.gov"))
+Author: Dylan Beaudette [aut, cre]
+Maintainer: Dylan Beaudette <dylan.beaudette@ca.usda.gov>
+Depends: R (>= 3.4.1)
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+Repository: CRAN
+URL: https://github.com/ncss-tech/SoilTaxonomy
+BugReports: https://github.com/ncss-tech/SoilTaxonomyissues
+Imports: 
+    stringdist,
+    purrr,
+    stringi,
+    data.tree
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1
