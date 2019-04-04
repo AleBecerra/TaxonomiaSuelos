@@ -1,4 +1,4 @@
 library(testthat)
-library(SoilTaxonomy)
+library(TaxonomiaSuelos)
 
-test_check("SoilTaxonomy")
+test_check("TaxonomiaSuelos")
