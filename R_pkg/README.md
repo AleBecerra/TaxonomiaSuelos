@@ -16,7 +16,7 @@ remotes::install_github("AleBecerra/TaxonomiaSuelos/R_pkg", dependencies=FALSE, 
 
 Give it a try.
 ```r
-library(SoilTaxonomy)
+library(TaxonomiaSuelos)
 
 # label formative elements in the hierarchy with brief explanations
 cat(explainST('typic endoaqualfs'))
