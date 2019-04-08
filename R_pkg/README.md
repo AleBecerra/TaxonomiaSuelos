@@ -19,9 +19,9 @@ Give it a try.
 library(TaxonomiaSuelos)
 
 # label formative elements in the hierarchy with brief explanations
-cat(explainST('typic endoaqualfs'))
+cat(explainST('haplustol éntico'))
 
-cat(explainST('abruptic haplic durixeralfs'))
+cat(explainST('durixeralf háplico abrúptico'))
 ```
 
 ```
