@@ -1,16 +1,15 @@
 
-#' Explain a subgroup level taxa from Soil Taxaonomy
-#'
-#' @param x a single subgroup, matching is exact and case insensitive
+#' Explicar los taxones a nivel de subgrupo del sistema Soil Taxonomy #'
+#' @param x un subgrupo, la concordancia es exacta, no distingue mayúsculas de minúsculas
 #' 
-#' @return a block of text, suitable for display in fixed-width font
+#' @return devuelve un bloque de texto, adecuado para mostrar con fuentes de ancho fijo
 #' 
-#' @note This function currently accepts only subgroup taxa. There are plans to extend to arbitrary levels of the heirarchy.
+#' @note esta función acepta solamente el nivel de subgrupo.
 #' 
 #' @export
 explainST <- function(x) {
   
-  # matching is done in lower case
+  # la concordancia se comprueba en minúsculas
   x <- tolower(x)
   
   x.o <- OrderFormativeElements(x)
@@ -19,7 +18,7 @@ explainST <- function(x) {
   x.sg <- SubGroupFormativeElements(x)
   
   ex <- list()
-  # the taxon to explain, usually a subgroup
+  # el taxón a explicar, generalmente un subgrupo
   ex[[1]] <- x
   
   ex[[2]] <- .subGroupLines(x.o, x.so, x.gg, x.sg)
@@ -35,29 +34,29 @@ explainST <- function(x) {
   return(res)
 }
 
-## internally used functions
+## funciones usadas internamente
 
 .printExplanation <- function(width=100, pos, txt) {
-  # split explanation into a vector
+  # separa la explicación en un vector
   txt <- strsplit(txt, split = '')[[1]]
-  # placement of explanation
+  # ubicación de la explicación
   idx <- seq(from=pos, to=pos + (length(txt) - 1))
-  # init whitespace, making room for very long explanation
+  # hace lugar para explicaciones largas
   ws <- rep(' ', times=pmax(width, max(idx)))
-  # insert text
+  # ingreso de texto
   ws[idx] <- txt
   
-  # convert to character
+  # convierte a caracter
   return(paste(ws, collapse=''))
 }
 
 .makeBars <- function(width=100, pos) {
-  # init whitespace
+  # espacio en blanco inicial
   ws <- rep(' ', times=width)
-  # insert bars
+  # inserta barras
   ws[pos] <- '|'
   
-  # convert to character
+  # convierte a caracter
   return(paste(ws, collapse=''))
 }
 
@@ -91,28 +90,28 @@ explainST <- function(x) {
 }
 
 # 
-# sg: list of lists
+# sg: lista de listas
 .subGroupLines <- function(o, so, gg, sg) {
   txt <- list()
   
-  # extract parts
+  # extrae partes
   sg.pos <- unlist(sg$char.index, unlist)
   sg.defs <- sg$defs[[1]]$connotation
   
   # counters
   i <- 1
   j <- 1
-  # local copy of positions
+  # copia local de posiciones
   sg.pos.temp <- sg.pos
   
-  # iterate over parts
+  # itera sobre partes
   while(i < length(sg.pos)+1) {
     
-    # add all bars
+    # agrega todas las barras
     txt[[j]] <- .makeBars(pos=c(sg.pos.temp, gg$char.index, so$char.index, o$char.index))
     txt[[j+1]] <- .printExplanation(pos = sg.pos.temp[1], txt = sg.defs[1])
     
-    # nibble vectors
+    # vectores mordisqueadores?
     sg.pos.temp <- sg.pos.temp[-1]
     sg.defs <- sg.defs[-1]
     
