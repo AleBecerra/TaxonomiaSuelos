@@ -1,4 +1,4 @@
-library(SoilTaxonomy)
+library(TaxonomiaSuelos)
 
 ## TODO: there are many subgroup formative elements missing from the dictionary, e.g. "xerollic"
 
