@@ -1,8 +1,8 @@
 
+Convierte el taxón de subgrupo a un diagrama de tallos con explicación en lenguaje plano
 
-Convert subgroup level tax into a stem-plot like output with plain language explanation.
 
-use formative elements / simple connotative desc.
+usa elementos formativos / connotación simple
 
 ```
 typic haploxerolls
