@@ -1,1 +1,0 @@
-falta traducir ST.rda
