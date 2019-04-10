@@ -2,7 +2,7 @@ library(data.tree)
 library(jsonlite)
 library(igraph)
 
-library(SoilTaxonomy)
+library(TaxonomiaSuelos)
 
 
 ## further ideas
@@ -10,7 +10,7 @@ library(SoilTaxonomy)
 # https://cran.r-project.org/web/packages/data.tree/vignettes/applications.html
 
 # load de-normalized version of the current edition, to the subgroup level
-data('ST', package = 'SoilTaxonomy')
+data('ST', package = 'TaxonomiaSuelos')
 
 ## this is the most detailed acreage accounting
 # subgroup acreages from SoilWeb / SSURGO
